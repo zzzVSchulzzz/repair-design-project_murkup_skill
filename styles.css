@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #131313;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 11 px
+}
+
+.logo a, .home a {
+  color: #E3B873;
+  text-decoration: none;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+}
+
+.contact a {
+    margin-right: 10px;
+    color: #E3B873;
+}
+
+.content {
+    width: 676.11px;
+    height: 305px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.submit button{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #E3B873;
+    color: white;
+    cursor: pointer;
+    border-radius: 2px;
+    width: 161px;
+    height: 37px;
+}
+
+button:hover { 
+    background-color: #E3B87333; /* Цвет кнопки при наведении */
+}
+
+.rostov{
+    color: #E3B873;
+}

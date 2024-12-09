@@ -1,17 +1,46 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Nunito Sans', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: 
+}
+
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Занять всю высоту экрана */
+    background-image: url('path/to/your/image.jpg'); /* Укажите путь к изображению */
+    background-size: cover; /* Покрытие всего экрана */
+    background-position: center; /* Центровка изображения */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный цвет */
+    z-index: 1; /* Устанавливаем выше фона */
 }
 
 header {
+    position: relative; /* Позиционируем относительно родителя */
+    z-index: 2; /* Устанавливаем выше полупрозрачного слоя */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #131313;
+    background-color: transparent; /* Убираем фоновый цвет */
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    position: relative; /* Позиционирование контента относительно остального */
+    z-index: 2; /* Устанавливаем выше полупрозрачного слоя */
+    width: 80%; /* Изменено для большей адаптивности */
+    max-width: 800px; /* Максимальная ширина для больших экранов */
+    margin: 20px auto;
+    padding: 20px;
 }
 
 nav {
@@ -23,12 +52,12 @@ nav a {
     margin: 0 15px;
     text-decoration: none;
     color: #FFFFFF;
-    font-size: 11 px
+    font-size: 11px;
 }
 
 .logo a, .home a {
-  color: #E3B873;
-  text-decoration: none;
+    color: #E3B873;
+    text-decoration: none;
 }
 
 .contact {
@@ -36,16 +65,14 @@ nav a {
     align-items: center;
 }
 
+.contact button {
+    font-style: italic;
+    text-transform: uppercase;
+}
+
 .contact a {
     margin-right: 10px;
     color: #E3B873;
-}
-
-.content {
-    width: 676.11px;
-    height: 305px;
-    margin: 20px auto;
-    padding: 20px;
 }
 
 .button-container {
@@ -54,10 +81,15 @@ nav a {
     margin-top: 15px;
 }
 
-.submit button{
+.button-container button {
+    width: 48%;
+    height: 51px;
+}
+
+.submit {
     background-color: transparent;
+    border: 2px solid white;
     color: white;
-    border: 1px solid white;
 }
 
 button {
@@ -67,14 +99,22 @@ button {
     color: white;
     cursor: pointer;
     border-radius: 2px;
-    width: 161px;
-    height: 37px;
 }
 
 button:hover { 
-    background-color: #E3B87333; /* Цвет кнопки при наведении */
+    background-color: #E3B87333;
 }
 
-.rostov{
-    color: #E3B873;
+.content p, h1 {
+  color: #FFFFFF;
+}
+
+.content h1{
+  font-family: 'Yeseva One';
+  text-transform: uppercase;
+
+  }
+
+span {
+  color: #E3B873;
 }

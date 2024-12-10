@@ -11,6 +11,7 @@ body {
     background-image: url('path/to/your/image.jpg'); /* Укажите путь к изображению */
     background-size: cover; /* Покрытие всего экрана */
     background-position: center; /* Центровка изображения */
+    font-size: 11px;
 }
 
 .overlay {
@@ -34,6 +35,10 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.first-title {
+    padding: 0 92px; /* Отступы по 92 пикселя с двух сторон для заголовка */
+}
+
 .content {
     position: relative; /* Позиционирование контента относительно остального */
     z-index: 2; /* Устанавливаем выше полупрозрачного слоя */
@@ -41,6 +46,10 @@ header {
     max-width: 800px; /* Максимальная ширина для больших экранов */
     margin: 20px auto;
     padding: 20px;
+}
+
+.extra-padding {
+    padding-bottom: 92px; /* Отступ в 92 пикселя после кнопки */
 }
 
 nav {
@@ -106,15 +115,21 @@ button:hover {
 }
 
 .content p, h1 {
-  color: #FFFFFF;
+    color: #FFFFFF;
 }
 
-.content h1{
-  font-family: 'Yeseva One';
-  text-transform: uppercase;
+.content p{
+  font-size: 22px;
+  font-family: 'Nunito Sans';
+  font-weight: 400;
+}
 
-  }
+.content h1 {
+    font-family: 'Yeseva One';
+    text-transform: uppercase;
+    font-size: 40px;
+}
 
 span {
-  color: #E3B873;
+    color: #E3B873;
 }

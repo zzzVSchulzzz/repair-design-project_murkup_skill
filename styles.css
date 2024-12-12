@@ -251,14 +251,8 @@ body .custom-background {
 .sub-sections.custom-sub-sections {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Две колонки одинаковой ширины */
-    gap: 10px; /* Расстояние между элементами */
+    gap: 2px; /* Уменьшаем расстояние между элементами до 2px */
     justify-items: start; /* Выравнивание всех элементов по левому краю */
-}
-
-.sub-sections.custom-sub-sections {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Две колонки одинаковой ширины */
-    gap: 10px; /* Расстояние между элементами */
     margin-top: 42px; /* Устанавливаем отступ сверху от параграфа */
     margin-left: 134.45px; /* Устанавливаем левый отступ, чтобы выровнять с параграфом */
 }
@@ -266,17 +260,31 @@ body .custom-background {
 .sub-section.custom-sub-section {
     box-sizing: border-box;
     padding-bottom: 34px; /* Отступы внутри каждого саб-секционного блока */
-    margin-left: 0; /* Убираем левый отступ, чтобы выравнивание было строго по краю */
+    margin: 0; /* Убираем все отступы для выравнивания */
 }
 
 .sub-section.custom-sub-section h3 {
     text-transform: uppercase; /* Преобразуем текст в верхний регистр */
     color: #E3B873; /* Устанавливаем цвет тексту подзаголовка */
     margin: 0; /* Убираем отступ для заголовка */
+    font-family: 'Yeseva One';
 }
 
 .sub-section.custom-sub-section p {
     margin-left: 0; /* Убираем левый отступ для параграфа */
+}
+
+.sub-section.custom-sub-section {
+    position: relative; /* Установка относительного позиционирования для родительского элемента */
+}
+
+.slideshow.custom-slideshow {
+    position: absolute; /* Абсолютное позиционирование относительно родителя */
+    top: 515px; /* Вертикальное расстояние от верхней границы родителя */
+    left: 155px; /* Горизонтальное расстояние от левой границы родителя */
+    background-color: grey; /* Цвет фона для слайдшоу */
+    width: 205.68px; /* Установите ширину, как вам нужно */
+    height: 13.28px; /* Установите высоту, как вам нужно */
 }
 
 .centered-title.custom-centered-title {

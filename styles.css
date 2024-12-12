@@ -1,5 +1,5 @@
 body {
-    font-family: 'Nunito Sans', Arial, sans-serif;
+    font-family: 'Nunito Sans';
     margin: 0;
     padding: 0;
 }
@@ -20,7 +20,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный цвет */
+    background-color: #000000B2; /* Полупрозрачный черный цвет */
     z-index: 1; /* Устанавливаем выше фона */
 }
 
@@ -30,9 +30,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: transparent; /* Убираем фоновый цвет */
-    padding: 10px 20px;
+    background-color: #131313;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 24px 92px;
+    padding-bottom: 22px;
 }
 
 .first-title {
@@ -82,11 +83,18 @@ nav a {
 .contact button {
     font-style: italic;
     text-transform: uppercase;
+    width: 161px;
+    height: 37px;
+    margin-left: 45px;
+    font-family: 'Nunito Sans';
+    font-size: 11px;
 }
 
 .contact a {
-    margin-right: 10px;
+    margin-left: 67.36px;
     color: #E3B873;
+    text-decoration:none;
+    border-bottom: 1px solid;
 }
 
 .button-container {
@@ -106,8 +114,8 @@ nav a {
     color: white;
 }
 
+
 button {
-    padding: 10px 15px;
     border: none;
     background-color: #E3B873;
     color: white;
@@ -123,7 +131,7 @@ button:hover {
     color: #FFFFFF;
 }
 
-.content p{
+.content p {
   font-family: 'Nunito Sans';
   font-size: 22px;
   font-weight: 400;
@@ -139,6 +147,60 @@ span {
     color: #E3B873;
 }
 
+body .custom-background {
+    background-color: #131313 !important;
+    color: white;
+    font-family: 'Nunito Sans', Arial, sans-serif;
+}
+
+.custom-container {
+    background-color: #131313;
+    color: white; 
+    padding: 20px;
+}
+
+
+.links.custom-links {
+    position: relative;
+    text-align: right;
+    padding-top: 107px;
+    padding-right: 190.55px;
+}
+
+.links.custom-links a {
+    text-transform: uppercase;
+    color: #FFFFFF4D;
+    margin-right: 15px;
+    text-decoration: none;
+    font-family: 'Yeseva One';
+}
+
+.links.custom-links a.active {
+    color: #E3B873;
+}
+
+.photo-container {
+    display: flex;
+    justify-content: flex-end; /* Выравнивание содержимого по правому краю */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    height: 100vh; /* Высота контейнера для полного заполнения экрана */
+     padding-top: 45.36px;
+    padding-right: 134.55px;
+}
+
+.photo-box.custom-photo-box {
+    background-color: gray; 
+    width: 679px; /* Ширина блока */
+    height: 482.38px; /* Высота блока */
+    opacity: 1; /* Полная видимость */
+}
+
+.photo-box.custom-photo-box img {
+    width: 100%; /* Заполнение ширины контейнера */
+    height: 100%; /* Заполнение высоты контейнера */
+    object-fit: cover; /* Сохранить пропорции и обрезать изображение, чтобы заполнить бокс */
+    display: block; /* Удаляет лишние отступы у изображений */
+}
 
 @media (max-width: 768px) { / Для устройств с шириной экрана 768px и меньше /
     .content {

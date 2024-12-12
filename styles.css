@@ -20,7 +20,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #000000B2; /* Полупрозрачный черный цвет */
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный цвет */
     z-index: 1; /* Устанавливаем выше фона */
 }
 
@@ -32,8 +32,7 @@ header {
     align-items: center;
     background-color: #131313;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 24px 92px;
-    padding-bottom: 22px;
+    padding: 24px 92px 22px; /* Объединение отступов для упрощения */
 }
 
 .first-title {
@@ -47,10 +46,9 @@ header {
     left: 134px; /* Отступ слева */
     right: 627.89px; /* Отступ справа */
     width: calc(100% - 134px - 627.89px); /* Вычисляем ширину по отступам */
-    height: auto; /* Высота можно автоматизировать с учетом контента */
-    border-radius: 2px 0px 0px 0px; /* Скругление углов */
+    height: auto; /* Высота может быть автоматизирована с учетом контента */
+    border-radius: 2px 0 0 0; /* Оптимизированное скругление углов */
     border: 1px solid transparent; /* Прозрачная граница */
-    opacity: 1; /* Установите 1 для видимости */
     z-index: 2; /* Поверх остальных элементов */
 }
 
@@ -92,7 +90,7 @@ nav a {
 .contact a {
     margin-left: 67.36px;
     color: #E3B873;
-    text-decoration:none;
+    text-decoration: none;
     border-bottom: 1px solid;
 }
 
@@ -113,7 +111,6 @@ nav a {
     color: white;
 }
 
-
 button {
     border: none;
     background-color: #E3B873;
@@ -123,19 +120,19 @@ button {
     font-style: italic;
 }
 
-button:hover { 
-    background-color: #E3B87333;
+button:hover {
+    background-color: rgba(227, 184, 115, 0.2); / Упрощенное значение для подведения /
 }
 
-.content p, h1 {
+.content p, .content h1 {
     color: #FFFFFF;
 }
 
 .content p {
-  font-family: 'Nunito Sans';
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 36.01px;
+    font-family: 'Nunito Sans';
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 36.01px;
 }
 
 .content h1 {
@@ -287,9 +284,10 @@ body .custom-background {
     height: 13.28px; /* Установите высоту, как вам нужно */
 }
 
-.centered-title.custom-centered-title {
+.centered-title.custom-centered-title h2 {
     text-align: center; /* Выравнивание по центру */
-    margin-top: 20px; /* Отступ сверху */
+    margin-top: 150px; /* Отступ сверху */
+    color: white; /* Цвет текста */
 }
 
 .centered-div.custom-centered-div {

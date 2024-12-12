@@ -81,7 +81,6 @@ nav a {
 }
 
 .contact button {
-    font-style: italic;
     text-transform: uppercase;
     width: 161px;
     height: 37px;
@@ -121,6 +120,7 @@ button {
     color: white;
     cursor: pointer;
     border-radius: 2px;
+    font-style: italic;
 }
 
 button:hover { 
@@ -135,6 +135,7 @@ button:hover {
   font-family: 'Nunito Sans';
   font-size: 22px;
   font-weight: 400;
+  line-height: 36.01px;
 }
 
 .content h1 {
@@ -185,9 +186,8 @@ body .custom-background {
     display: flex;
     justify-content: flex-end; /* Выравнивание содержимого по правому краю */
     align-items: flex-start; /* Выравнивание по верхнему краю */
-    height: 100vh; /* Высота контейнера для полного заполнения экрана */
-    padding-top: 45.36px;
-    padding-right: 134.55px;
+    padding-top: 45.36px; /* Отступ сверху */
+    padding-right: 134.55px; /* Отступ справа */
 }
 
 .photo-box.custom-photo-box {
@@ -195,6 +195,7 @@ body .custom-background {
     width: 679px; /* Ширина блока */
     height: 482.38px; /* Высота блока */
     opacity: 1; /* Полная видимость */
+    margin-top: 0; /* Убрали margin-right, использован padding в контейнере */
 }
 
 .photo-box.custom-photo-box img {
@@ -211,7 +212,9 @@ body .custom-background {
 
 .photo-container {
     flex: 1; /* Контейнер фото займет все доступное пространство */
-    padding: 20px; /* Отступ для контейнера с фото */
+    padding: 0; /* Убираем отступы от контейнера с фото */
+    display: flex; /* Используем flex для применения конкретного выравнивания */
+    align-items: flex-start; /* Выравнивание по верхнему краю контейнера */
 }
 
 .text-section.custom-text-section {
@@ -220,28 +223,60 @@ body .custom-background {
     padding: 20px; /* Отступ внутри текстового контейнера */
 }
 
+.photo-box.custom-photo-box {
+    background-color: gray;
+    width: 679px;
+    height: 482.38px;
+    opacity: 1;
+    margin-right: 112px; /* Отступ справа от фото */
+    margin-top: 45.36px; /* Отступ сверху от фотографии */
+    align-self: flex-start; /* Выравнивание фото по верхнему краю его контейнера */
+}
+
 .text-section.custom-text-section h2 {
     color: #E3B873; /* Цвет заголовка с прозрачностью */
-    margin-bottom: 16px; /* Отступ снизу под заголовком */
+    margin-bottom: 34px; /* Отступ снизу под заголовком */
     font-family: 'Yeseva One';
     text-transform: uppercase;
+    margin-left: 134.45px;
 }
 
 .text-section.custom-text-section p {
-    margin: 0; /* Сброс отступов по умолчанию */
+    margin: 0;
+    font-size: 14px;
+    margin-left: 134.45px;
+    line-height: 26.73px;
 }
 
 .sub-sections.custom-sub-sections {
-    margin-top: 20px; /* Отступ сверху под секциями */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Две колонки одинаковой ширины */
+    gap: 10px; /* Расстояние между элементами */
+    justify-items: start; /* Выравнивание всех элементов по левому краю */
+}
+
+.sub-sections.custom-sub-sections {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Две колонки одинаковой ширины */
+    gap: 10px; /* Расстояние между элементами */
+    margin-top: 42px; /* Устанавливаем отступ сверху от параграфа */
+    margin-left: 134.45px; /* Устанавливаем левый отступ, чтобы выровнять с параграфом */
 }
 
 .sub-section.custom-sub-section {
-    margin-bottom: 10px; /* Отступ снизу между под-секциями */
+    box-sizing: border-box;
+    padding-bottom: 34px; /* Отступы внутри каждого саб-секционного блока */
+    margin-left: 0; /* Убираем левый отступ, чтобы выравнивание было строго по краю */
 }
 
 .sub-section.custom-sub-section h3 {
-    color: #E3B873; /* Цвет подзаголовков */
-    font-weight: normal; /* Нормальный вес шрифта для подзаголовков */
+    text-transform: uppercase; /* Преобразуем текст в верхний регистр */
+    color: #E3B873; /* Устанавливаем цвет тексту подзаголовка */
+    margin: 0; /* Убираем отступ для заголовка */
+}
+
+.sub-section.custom-sub-section p {
+    margin-left: 0; /* Убираем левый отступ для параграфа */
 }
 
 .centered-title.custom-centered-title {
@@ -266,21 +301,34 @@ body .custom-background {
     object-fit: cover; /* Сохранить пропорции и заполнить контейнер */
 }
 
-@media (max-width: 768px) { / Для устройств с шириной экрана 768px и меньше /
-    .content {
-      width: calc(100% - 20px); / Полная ширина с отступами /
-      top: 50px; / Адаптируем верхний отступ /
-      left: 10px; / Левый отступ /
-      right: 10px; / Правый отступ /
-      bottom: 20px; / Нижний отступ /
-    }
 
-@media (max-width: 480px) { / Для еще меньших экранов (например, телефоны) /
-    .content {
-      width: calc(100% - 10px); / Почти полная ширина с минимальными отступами /
-      top: 20px; / Адаптируем верхний отступ /
-      left: 5px; / Левый отступ /
-      right: 5px; / Правый отступ /
-      bottom: 10px; / Нижний отступ /
-    }
+/* Для устройств с шириной экрана 768px и меньше */
+@media (max-width: 768px) {
+  .content {
+    width: calc(100% - 20px); /* Полная ширина с отступами */
+    top: 50px;                 /* Оставим стандартный верхний отступ */
+    left: 10px;                /* Оставим стандартный левый отступ */
+    right: 10px;               /* Оставим стандартный правый отступ */
+    bottom: 20px;              /* Оставим стандартный нижний отступ */
+  }
+}
+
+/* Для еще меньших экранов (например, телефоны) */
+@media (max-width: 480px) {
+  .content {
+    width: calc(100% - 10px); /* Почти полная ширина с минимальными отступами */
+    top: 20px;                /* Адаптируем верхний отступ */
+    left: 5px;                /* Левый отступ */
+    right: 5px;               /* Правый отступ */
+    bottom: 10px;             /* Нижний отступ */
+  }
+}
+
+/* Дополнительный медиазапрос для планшетов (если необходимо) */
+@media (max-width: 600px) {
+  .content {
+    top: 40px;                /* Можно уменьшить отступ сверху на планшетах */
+    left: 8px;                /* Левый отступ */
+    right: 8px;               /* Правый отступ */
+  }
 }

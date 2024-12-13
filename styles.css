@@ -276,16 +276,14 @@ body .custom-background {
 
 .centered-title.custom-centered-title {
     text-align: center; /* Выравнивание по центру */
-    margin-top: 750px; /* Отступ сверху */
+    margin-top: 700px; /* Отступ сверху */
     color: white; /* Цвет текста */
     font-family: 'Yeseva One';
+    font-size: 20px;
+    text-transform: uppercase;
 }
 
-.centered-div.custom-centered-div {
-    display: flex; /* Гибкий контейнер для централизации */
-    justify-content: center; /* Центрирование содержимого */
-    margin-top: 20px; /* Отступ сверху */
-}
+
 
 .photo-box.custom-photo-box {
     max-width: 100%; /* Максимальная ширина */

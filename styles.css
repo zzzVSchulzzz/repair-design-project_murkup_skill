@@ -20,7 +20,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный цвет */
+    background-color: #000000B2; /* Полупрозрачный черный цвет */
     z-index: 1; /* Устанавливаем выше фона */
 }
 
@@ -32,7 +32,8 @@ header {
     align-items: center;
     background-color: #131313;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 24px 92px 22px; /* Объединение отступов для упрощения */
+    padding: 24px 92px;
+    padding-bottom: 22px;
 }
 
 .first-title {
@@ -46,14 +47,15 @@ header {
     left: 134px; /* Отступ слева */
     right: 627.89px; /* Отступ справа */
     width: calc(100% - 134px - 627.89px); /* Вычисляем ширину по отступам */
-    height: auto; /* Высота может быть автоматизирована с учетом контента */
-    border-radius: 2px 0 0 0; /* Оптимизированное скругление углов */
+    height: auto; /* Высота можно автоматизировать с учетом контента */
+    border-radius: 2px 0px 0px 0px; /* Скругление углов */
     border: 1px solid transparent; /* Прозрачная граница */
+    opacity: 1; /* 1 для видимости */
     z-index: 2; /* Поверх остальных элементов */
 }
 
 .extra-padding {
-    padding-bottom: 92px; /* Отступ в 92 пикселя после кнопки */
+    padding-bottom: 92px; /* Отступ после кнопки */
 }
 
 nav {
@@ -90,19 +92,24 @@ nav a {
 .contact a {
     margin-left: 67.36px;
     color: #E3B873;
-    text-decoration: none;
+    text-decoration:none;
     border-bottom: 1px solid;
 }
 
 .button-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Изменено для упрощения управления отступами */
     margin-top: 15px;
 }
 
 .button-container button {
-    width: 48%;
+    width: 207px;
     height: 51px;
+    margin-right: 20px; /* Установите отступ справа для всех кнопок */
+}
+
+.button-container button:last-child {
+    margin-right: 0; /* Уберите отступ у последней кнопки */
 }
 
 .submit {
@@ -110,6 +117,7 @@ nav a {
     border: 2px solid white;
     color: white;
 }
+
 
 button {
     border: none;
@@ -120,19 +128,19 @@ button {
     font-style: italic;
 }
 
-button:hover {
-    background-color: rgba(227, 184, 115, 0.2); / Упрощенное значение для подведения /
+button:hover { 
+    background-color: #E3B87333;
 }
 
-.content p, .content h1 {
+.content p, h1 {
     color: #FFFFFF;
 }
 
 .content p {
-    font-family: 'Nunito Sans';
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 36.01px;
+  font-family: 'Nunito Sans';
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 36.01px;
 }
 
 .content h1 {
@@ -153,21 +161,19 @@ body .custom-background {
 
 .custom-container {
     background-color: #131313;
-    color: white; 
+    color: white;
     padding: 20px;
 }
-
 
 .links.custom-links {
     position: relative;
     text-align: right;
-    padding-top: 107px;
-    padding-right: 190.55px;
+    padding: 107px 190.55px 0 0;
 }
 
 .links.custom-links a {
     text-transform: uppercase;
-    color: #FFFFFF4D;
+    color: rgba(255, 255, 255, 0.3);
     margin-right: 15px;
     text-decoration: none;
     font-family: 'Yeseva One';
@@ -181,43 +187,9 @@ body .custom-background {
 
 .photo-container {
     display: flex;
-    justify-content: flex-end; /* Выравнивание содержимого по правому краю */
-    align-items: flex-start; /* Выравнивание по верхнему краю */
-    padding-top: 45.36px; /* Отступ сверху */
-    padding-right: 134.55px; /* Отступ справа */
-}
-
-.photo-box.custom-photo-box {
-    background-color: gray; 
-    width: 679px; /* Ширина блока */
-    height: 482.38px; /* Высота блока */
-    opacity: 1; /* Полная видимость */
-    margin-top: 0; /* Убрали margin-right, использован padding в контейнере */
-}
-
-.photo-box.custom-photo-box img {
-    width: 100%; /* Заполнение ширины контейнера */
-    height: 100%; /* Заполнение высоты контейнера */
-    object-fit: cover; /* Сохранить пропорции и обрезать изображение, чтобы заполнить бокс */
-    display: block; /* Удаляет лишние отступы у изображений */
-}
-
-.parent-container {
-    display: flex; /* Используем flex для горизонтального расположения фото и текста */
-    position: relative; /* Относительное позиционирование для поддержки абсолютного позиционирования внутри */
-}
-
-.photo-container {
-    flex: 1; /* Контейнер фото займет все доступное пространство */
-    padding: 0; /* Убираем отступы от контейнера с фото */
-    display: flex; /* Используем flex для применения конкретного выравнивания */
-    align-items: flex-start; /* Выравнивание по верхнему краю контейнера */
-}
-
-.text-section.custom-text-section {
-    flex: 1; /* Контейнер текста займет также все доступное пространство */
-    position: relative; /* Относительное позиционирование */
-    padding: 20px; /* Отступ внутри текстового контейнера */
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 45.36px 134.55px 0 0;
 }
 
 .photo-box.custom-photo-box {
@@ -225,39 +197,63 @@ body .custom-background {
     width: 679px;
     height: 482.38px;
     opacity: 1;
-    margin-right: 112px; /* Отступ справа от фото */
-    margin-top: 45.36px; /* Отступ сверху от фотографии */
-    align-self: flex-start; /* Выравнивание фото по верхнему краю его контейнера */
+    margin-top: 45px;
+    margin-right: 112px;
+    align-self: flex-start;
+}
+
+.photo-box.custom-photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.parent-container {
+    display: flex;
+    position: relative;
+}
+
+.photo-container {
+    flex: 1;
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.text-section.custom-text-section {
+    flex: 1;
+    position: relative;
+    padding: 20px;
 }
 
 .text-section.custom-text-section h2 {
-    color: #E3B873; /* Цвет заголовка с прозрачностью */
-    margin-bottom: 34px; /* Отступ снизу под заголовком */
+    color: #E3B873; /* Цвет заголовка */
+    margin: 0 0 34px 134.45px; /* Упрощение отступов */
     font-family: 'Yeseva One';
     text-transform: uppercase;
-    margin-left: 134.45px;
 }
 
 .text-section.custom-text-section p {
-    margin: 0;
+    margin: 0; /* Убираем отступы */
     font-size: 14px;
-    margin-left: 134.45px;
     line-height: 26.73px;
+    margin-left: 134.45px;  /* Повторяющийся отступ, можно рассмотреть возможность применения к родительским элементам */
 }
 
 .sub-sections.custom-sub-sections {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Две колонки одинаковой ширины */
-    gap: 2px; /* Уменьшаем расстояние между элементами до 2px */
+    gap: 2px; /* Уменьшаем расстояние между элементами */
     justify-items: start; /* Выравнивание всех элементов по левому краю */
-    margin-top: 42px; /* Устанавливаем отступ сверху от параграфа */
-    margin-left: 134.45px; /* Устанавливаем левый отступ, чтобы выровнять с параграфом */
+    margin: 42px 0 0 134.45px; /* Объединение отступов */
 }
 
 .sub-section.custom-sub-section {
     box-sizing: border-box;
     padding-bottom: 34px; /* Отступы внутри каждого саб-секционного блока */
     margin: 0; /* Убираем все отступы для выравнивания */
+    position: relative; /* Установка относительного позиционирования для родительского элемента */
 }
 
 .sub-section.custom-sub-section h3 {
@@ -271,22 +267,18 @@ body .custom-background {
     margin-left: 0; /* Убираем левый отступ для параграфа */
 }
 
-.sub-section.custom-sub-section {
-    position: relative; /* Установка относительного позиционирования для родительского элемента */
-}
-
 .slideshow.custom-slideshow {
     position: absolute; /* Абсолютное позиционирование относительно родителя */
     top: 515px; /* Вертикальное расстояние от верхней границы родителя */
     left: 155px; /* Горизонтальное расстояние от левой границы родителя */
     background-color: grey; /* Цвет фона для слайдшоу */
-    width: 205.68px; /* Установите ширину, как вам нужно */
-    height: 13.28px; /* Установите высоту, как вам нужно */
+    width: 205.68px; /* Установите ширину */
+    height: 13.28px; /* Установите высоту */
 }
 
-.centered-title.custom-centered-title h2 {
+.centered-title.custom-centered-title {
     text-align: center; /* Выравнивание по центру */
-    margin-top: 150px; /* Отступ сверху */
+    margin-top: 90.72px; /* Отступ сверху */
     color: white; /* Цвет текста */
 }
 

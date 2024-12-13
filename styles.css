@@ -212,13 +212,11 @@ body .custom-background {
 .parent-container {
     display: flex;
     position: relative;
+    flex-direction: row;
 }
 
 .photo-container {
-    flex: 1;
-    padding: 0;
-    display: flex;
-    align-items: flex-start;
+    padding: 0; /* Убедитесь, что отступы по умолчанию ноль */
 }
 
 .text-section.custom-text-section {
@@ -228,8 +226,8 @@ body .custom-background {
 }
 
 .text-section.custom-text-section h2 {
-    color: #E3B873; /* Цвет заголовка */
-    margin: 0 0 34px 134.45px; /* Упрощение отступов */
+    color: #E3B873;
+    margin: 0 0 34px 134.45px;
     font-family: 'Yeseva One';
     text-transform: uppercase;
 }
@@ -238,38 +236,38 @@ body .custom-background {
     margin: 0; /* Убираем отступы */
     font-size: 14px;
     line-height: 26.73px;
-    margin-left: 134.45px;  /* Повторяющийся отступ, можно рассмотреть возможность применения к родительским элементам */
+    margin-left: 134.45px;
 }
 
 .sub-sections.custom-sub-sections {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Две колонки одинаковой ширины */
-    gap: 2px; /* Уменьшаем расстояние между элементами */
-    justify-items: start; /* Выравнивание всех элементов по левому краю */
-    margin: 42px 0 0 134.45px; /* Объединение отступов */
+   grid-template-columns: repeat(2, minmax(200px, 1fr));/* Две колонки одинаковой ширины */
+    gap: 34px;
+    justify-items: start;
+    margin: 42px 0 0 134.45px;
 }
 
 .sub-section.custom-sub-section {
     box-sizing: border-box;
-    padding-bottom: 34px; /* Отступы внутри каждого саб-секционного блока */
-    margin: 0; /* Убираем все отступы для выравнивания */
-    position: relative; /* Установка относительного позиционирования для родительского элемента */
+    padding-bottom: 29px;
+    margin: 0;
+    position: relative;
 }
 
 .sub-section.custom-sub-section h3 {
-    text-transform: uppercase; /* Преобразуем текст в верхний регистр */
-    color: #E3B873; /* Устанавливаем цвет тексту подзаголовка */
-    margin: 0; /* Убираем отступ для заголовка */
+    text-transform: uppercase;
+    color: #E3B873;
+    margin: 0;
     font-family: 'Yeseva One';
 }
 
 .sub-section.custom-sub-section p {
-    margin-left: 0; /* Убираем левый отступ для параграфа */
+    margin-left: 0;
 }
 
 .slideshow.custom-slideshow {
-    position: absolute; /* Абсолютное позиционирование относительно родителя */
-    top: 515px; /* Вертикальное расстояние от верхней границы родителя */
+    position: absolute;
+    top: 512px; /* Вертикальное расстояние от верхней границы родителя */
     left: 155px; /* Горизонтальное расстояние от левой границы родителя */
     background-color: grey; /* Цвет фона для слайдшоу */
     width: 205.68px; /* Установите ширину */
@@ -278,8 +276,9 @@ body .custom-background {
 
 .centered-title.custom-centered-title {
     text-align: center; /* Выравнивание по центру */
-    margin-top: 90.72px; /* Отступ сверху */
+    margin-top: 750px; /* Отступ сверху */
     color: white; /* Цвет текста */
+    font-family: 'Yeseva One';
 }
 
 .centered-div.custom-centered-div {

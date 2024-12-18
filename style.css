@@ -161,22 +161,37 @@ button:hover {
 
 .text-block {
     flex: 1; /* Элемент занимает оставшееся пространство */
-    margin-left: 134.55px;
+    position: relative;
+    padding: 20px;
+}
+
+.text-block h2, h3 {
+    text-transform: uppercase;
+    color: #E3B873;
+    font-family: 'Yeseva One';
+    margin: 0 0 34px 134.45px;
+}
+
+.text-block p {
+    margin: 0; /* Убираем отступы */
+    font-size: 14px;
+    line-height: 26.73px;
+    margin-left: 134.45px;
 }
 
 .sub-sections {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Две колонки */
-    gap: 20px; /* Промежуток между колонками */
-    margin-top: 20px; /* Отступ сверху */
-    width: 442px; /* Ширина контейнера */
-    height: 390px; /* Высота контейнера */
+    gap: 34px; /* Промежуток между колонками */
+    justify-items: start;
+    margin: 42px 0 0 134.45px;
 }
 
-h2, h3 {
-    text-transform: uppercase;
-    color: #E3B873;
-    font-family: 'Yeseva One';
+.sub-section {
+    box-sizing: border-box;
+    padding-bottom: 29px;
+    margin: 0;
+    position: relative;
 }
 
 .slider {

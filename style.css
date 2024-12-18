@@ -117,7 +117,7 @@ button:hover {
 .custom-navigation {
     width: calc(100% - 190.55px);
     text-align: right; /* Выравнивание текста вправо */
-    margin: 107px 190.55px 45.36px;
+    margin: 107px 190.55px 45.36px 625.45px;
 }
 
 .custom-navigation ul {
@@ -136,6 +136,7 @@ button:hover {
     color: rgba(255, 255, 255, 0.3); /* Цвет ссылок */
     text-decoration: none; /* Убираем подчеркивание */
     font-size: 14px;
+    font-family: 'Yeseva One';
 }
 
 .custom-navigation a .underlined {
@@ -150,17 +151,17 @@ button:hover {
 }
 
 .main-photo {
-    max-width: 100%; /* Адаптивная ширина изображения */
-    height: auto;
-    margin-left: 70px;
-    margin-right: 134.55px;
-    margin-bottom: 45px;
-    position: relative;
+    width: 679px; /* Ширина изображения */
+    height: 482px; /* Высота изображения */
+    margin-left: 120px; /* Отступ слева */
+    margin-right: 134.55px; /* Отступ справа */
+    margin-bottom: 45px; /* Отступ снизу */
+    position: relative; /* Для абсолютного позиционирования */
 }
 
 .text-block {
     flex: 1; /* Элемент занимает оставшееся пространство */
-    margin-left: 134.55px; /* Отступ слева от текстовой области */
+    margin-left: 134.55px;
 }
 
 .sub-sections {
@@ -168,6 +169,14 @@ button:hover {
     grid-template-columns: repeat(2, 1fr); /* Две колонки */
     gap: 20px; /* Промежуток между колонками */
     margin-top: 20px; /* Отступ сверху */
+    width: 442px; /* Ширина контейнера */
+    height: 390px; /* Высота контейнера */
+}
+
+h2, h3 {
+    text-transform: uppercase;
+    color: #E3B873;
+    font-family: 'Yeseva One';
 }
 
 .slider {

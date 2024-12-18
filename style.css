@@ -117,13 +117,13 @@ button:hover {
 .custom-navigation {
     width: calc(100% - 190.55px);
     text-align: right; /* Выравнивание текста вправо */
-    padding: 107px 0; /* Отступы сверху и снизу */
+    margin: 107px 190.55px 45.36px;
 }
 
 .custom-navigation ul {
     list-style: none;
     padding: 0; /* Убираем отступы */
-    margin: 0; /* Убираем отступы */
+    margin-right: 0; /* Убираем отступы */
 }
 
 .custom-navigation li {
@@ -144,69 +144,36 @@ button:hover {
     text-underline-offset: 6.68px;
 }
 
-.custom-navigation a:hover {
-    color: #E3B873; /* Цвет ссылки при наведении */
-}
-
-.picture-container {
-    display: flex; /* Flexbox для выравнивания содержимого */
-    align-items: flex-start; /* Выравнивание по верхнему краю */
-    margin-top: 45px; /* Отступ сверху от остальных элементов */
-    background-color: #131313; /* Фон */
-    padding: 20px; /* Внутренние отступы */
+.content-container {
+    display: flex;
+    align-items: flex-start; /* Выравниваем по верхнему краю */
 }
 
 .main-photo {
-    width: 100%; /* Заполнение ширины контейнера */
-    max-width: 679px; /* Максимальная ширина изображения */
-    height: auto; /* Автоматическая высота для сохранения пропорций */
-    object-fit: cover; /* Сохранение пропорций и заполнение контейнера */
-    margin-right: 20px; /* Отступ справа от изображения */
+    max-width: 100%; /* Адаптивная ширина изображения */
+    height: auto;
+    margin-left: 70px;
+    margin-right: 134.55px;
+    margin-bottom: 45px;
+    position: relative;
 }
 
-.text-container {
-    flex: 1; /* Отнимаем пространство от текстовой области */
-    color: white; /* Цвет текста */
-    padding: 20px; /* Внутренние отступы */
-}
-
-.text-container h2 {
-    color: #E3B873; /* Цвет заголовка */
-    margin: 0 0 20px; /* Отступы для заголовка */
-    font-family: 'Yeseva One'; /* Шрифт */
-    text-transform: uppercase; /* Преобразование текста в верхний регистр */
-}
-
-.text-container p {
-    margin: 0 0 20px; /* Отступы для параграфа */
-    font-size: 14px; /* Размер шрифта */
-    line-height: 1.5; /* Высота строки */
+.text-block {
+    flex: 1; /* Элемент занимает оставшееся пространство */
+    margin-left: 134.55px; /* Отступ слева от текстовой области */
 }
 
 .sub-sections {
-    display: grid; /* Используем Grid для размещения подкатегорий */
-    grid-template-columns: repeat(2, minmax(200px, 1fr)); /* Две колонки */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Две колонки */
     gap: 20px; /* Промежуток между колонками */
+    margin-top: 20px; /* Отступ сверху */
 }
 
-.sub-section {
-    box-sizing: border-box; /* Учет отступов при расчете ширины и высоты */
-}
-
-.sub-section h3 {
-    text-transform: uppercase; /* Преобразование текста в верхний регистр */
-    color: #E3B873; /* Цвет заголовка subsection */
-    margin: 0; /* Убираем margin */
-}
-
-.sub-section p {
-    margin: 0; /* Убираем margin для текста */
-}
-
-.slideshow {
-    margin-top: 20px; /* Отступ сверху от слайдера */
-    width: 100%; /* Заполнение ширины контейнера */
+.slider {
+    width: 100%; /* Заполнение ширины контейнера слайдера */
     height: auto; /* Высота подстраивается под содержимое */
+    margin-top: 20px; /* Отступ сверху от слайдера */
 }
 
 

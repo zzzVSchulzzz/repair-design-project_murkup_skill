@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IC "Repair Design Project"</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;600;700;800&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
             <nav class="navigation">
                 <ul>
                     <li>
-                        <a href="#">HOME</a>
+                        <a href="#"><span class="home">HOME</span></a>
                     </li>
                     <li>
                         <a href="#">PROJECTS</a>
@@ -46,13 +46,14 @@
 
     <main>
         <section class="first-section">
+            <div class="overlay"></div> <!-- Полупрозрачный слой -->
             <div class="first-section-container">
                 <h1>
-                    Turnkey Repair in the city of <span class="rostov-color">Rostov-on-Don</span>
+                    Turnkey Repair in the <br> city of <span class="rostov-color">Rostov-on-Don</span>
                 </h1>
                 <p>
-                    Get ready-made turnkey repairs on time
-                    with work time saving up to 45 days and 20% from
+                    Get ready-made turnkey repairs on time <br>
+                    with work time saving up to 45 days and 20% from <br>
                     cost of materials due to the organization of work
                 </p>
                 <div class="button-container">
@@ -66,13 +67,13 @@
             <div class="second-section-container">
                 <nav class="custom-navigation">
                     <ul>
-                        <li><a href="#">Rostov-on-Don, Admiral</a></li>
+                        <li><a href="#"><span class="underlined">Rostov-on-Don, Admiral</span></a></li>
                         <li><a href="#">Sochi Thieves</a></li>
                         <li><a href="#">Rostov-on-Don Patriotic</a></li>
                     </ul>
                 </nav>
+                <img class="main-photo" src="assets/image 2.1.png" alt="photo">
                 <div class="picture-container">
-                    <img src="assets/image 4.3.jpg" alt="picture">
                     <div class="text-container">
                         <h2>Completed projects</h2>
                         <p>
@@ -101,20 +102,19 @@
                     </div>
                     <img src="assets/Group 2.18.png" alt="slider">
                 </div>
-            </div>
-        </section>
-
-        <section class="third-section">
-            <div class="third-section-container">
                 <h3>online control</h3>
                 <div class="camera-photo-group">
                     <img src="assets/Rectangle 6.7.png" alt="">
                     <img src="assets/Group.png" alt="camera">
                     <img src="assets/Rectangle 6.7.png" alt="">
                 </div>
-                <img src="assets/image 6.png" alt="picture">
-                <img src="assets/Ellipse.png" alt="Ellipse">
-                <img src="assets/Polygon.png" alt="Polygon">
+            </div>
+        </section>
+
+        <section class="third-section">
+            <div class="third-section-container">
+                <img src="assets/Mask Group (1).png" alt="picture">
+                <img src="assets/player.png" alt="player">
                 <hr>
                 <p>
                     At each facility, a camera is installed that broadcasts 
@@ -191,37 +191,7 @@
                     </div>
                 </div>
                 <div class="consultation-section">
-                    <div class="pros">
-                        <div class="pros-order">
-                            <img src="assets/framesercule.png" alt="Ellipse">
-                            <p class="num-position">01</p>
-                            <p>
-                                Our specialist will arrive for measurements per day
-                                contact, or appoint a date convenient for you
-                            </p>
-                        </div>
-                        <div class="pros-order">
-                            <img src="assets/framesercule.png" alt="Ellipse">
-                            <p class="num-position">02</p>
-                            <p>
-                                Free metering
-                            </p>
-                        </div>
-                        <div class="pros-order">
-                            <img src="assets/framesercule.png" alt="Ellipse">
-                            <p class="num-position">03</p>
-                            <p>
-                                Free consultation
-                            </p>
-                        </div>
-                        <div class="pros-order">
-                            <img src="assets/framesercule.png" alt="Ellipse">
-                            <p class="num-position">04</p>
-                            <p>
-                                Get a cost estimate and the timing of your future repairs
-                            </p>
-                        </div>
-                    </div>
+                    <img src="assets/Group 22.png" alt="pros">
                 </div>
                 <form class="second-form">
                     <h3>Leave a request for free departure of the measurer</h3>
@@ -238,10 +208,65 @@
                 <img src="assets/Group 20.png" alt="discount">
             </div>
         </section>
+
+        <section class="fifth-section">
+            <div class="fifth-section-container">
+                <img src="assets/Group 46.png" alt="deal">
+                <img src="assets/Frame (2).png" alt="city-frame">
+                <img src="assets/Frame (1).png" alt="city-frame">
+            </div>
+        </section>
+        <div class="form-div">
+            <h3>have any questions?</h3>
+            <form class="third-form">
+                <label for="sfname">Name</label><br>
+                <input type="text" id="sfname" name="sfname" placeholder="What is your name:"><br>
+                <label for="smphone">Phone</label><br>
+                <input type="tel" id="smphone" name="smphone" placeholder="Your phone number:"><br>
+                <label for="faq">Question</label><br>
+                <input type="text" id="faq" name="faq" placeholder="I want to know:"><br>
+                <input type="checkbox" id="agreement" name="agreement" value="Agreement">
+                <label for="agreement">I agree to the processing of personal data</label><br>
+                <button type="submit">SUBMIT</button>
+            </form>
+        </div>
+        <section class="six-section">
+                <img src="assets/Group 42.1.png" alt="contact-us">
+                <img src="assets/map.png" alt="map">
+       </section>
     </main>
 
-    <footer>
+    <footer class="footer">
+        <div class="footer-container">
+            <span class="logo">IC "Repair Design Project"</span>
+            
+            <nav class="navigation">
+                <ul>
+                    <li>
+                        <a href="#"><span class="home">HOME</span></a>
+                    </li>
+                    <li>
+                        <a href="#">PROJECTS</a>
+                    </li>
+                    <li>
+                        <a href="#">MEASUREMENT</a>
+                    </li>
+                    <li>
+                        <a href="#">TEAM</a>
+                    </li>
+                    <li>
+                        <a href="#">REVIEWS</a>
+                    </li>
+                    <li>
+                        <a href="#">CONTACTS</a>
+                    </li>
+                </ul>
+            </nav>
 
+            <span class="phone-number"><a href="tel:+79287683239">+7 (928) 768-32-39</a></span>
+
+            <button type="submit" class="request-call">Request a call</button>
+        </div>
     </footer>
 </body>
 </html>

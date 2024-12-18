@@ -115,15 +115,11 @@ button:hover {
 
 /* ========== Вторая секция ========== */
 .custom-navigation {
-    width: calc(100% - 190.55px);
-    text-align: right; /* Выравнивание текста вправо */
-    margin: 107px 190.55px 45.36px 625.45px;
+    width: 100%;
 }
 
-.custom-navigation ul {
-    list-style: none;
-    padding: 0; /* Убираем отступы */
-    margin-right: 0; /* Убираем отступы */
+.custom-navigation > ul {
+    margin-left: calc(33.33% + 20px);
 }
 
 .custom-navigation li {
@@ -151,16 +147,13 @@ button:hover {
 }
 
 .main-photo {
-    width: 679px; /* Ширина изображения */
-    height: 482px; /* Высота изображения */
-    margin-left: 120px; /* Отступ слева */
-    margin-right: 134.55px; /* Отступ справа */
+    flex: 3;
     margin-bottom: 45px; /* Отступ снизу */
     position: relative; /* Для абсолютного позиционирования */
 }
 
 .text-block {
-    flex: 1; /* Элемент занимает оставшееся пространство */
+    flex: 2; /* Элемент занимает оставшееся пространство */
     position: relative;
     padding: 20px;
 }
@@ -184,7 +177,6 @@ button:hover {
     grid-template-columns: repeat(2, 1fr); /* Две колонки */
     gap: 34px; /* Промежуток между колонками */
     justify-items: start;
-    margin: 42px 0 0 134.45px;
 }
 
 .sub-section {
@@ -197,7 +189,6 @@ button:hover {
 .slider {
     width: 100%; /* Заполнение ширины контейнера слайдера */
     height: auto; /* Высота подстраивается под содержимое */
-    margin-top: 20px; /* Отступ сверху от слайдера */
 }
 
 

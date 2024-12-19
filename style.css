@@ -84,11 +84,11 @@ body {
 .button-container button {
     width: 207px;
     height: 51px;
-    margin-right: 20px; /* Установите отступ справа для всех кнопок */
+    margin-right: 20px; /* отступ справа для всех кнопок */
 }
 
 .button-container button:last-child {
-    margin-right: 0; /* Уберите отступ у последней кнопки */
+    margin-right: 0; 
 }
 
 .submit {

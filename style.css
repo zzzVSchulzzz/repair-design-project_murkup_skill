@@ -39,6 +39,7 @@ body {
     color: white; /* Цвет текста */
     font-family: 'Nunito Sans', Arial, sans-serif; /* Шрифт */
     padding: 20px; /* Отступы */
+
 }
 
 .second-section-container {
@@ -115,15 +116,20 @@ button:hover {
 
 /* ========== Вторая секция ========== */
 .custom-navigation {
+    display: flex; /* Используем Flexbox */
     width: 100%;
+    margin-top: 107px;
 }
 
 .custom-navigation > ul {
-    margin-left: calc(33.33% + 20px);
+    display: flex; /* Используем Flexbox для списка */
+    margin: 0; /* Убираем отступы */
+    padding: 0; /* Убираем отступы */
+    list-style-type: none; /* Убираем маркеры списка */
 }
 
 .custom-navigation li {
-    display: inline; /* Выравнивание элементов списка в строку */
+    display: inline; /* Элементы списка в строку */
     margin-right: 60.5px; /* Отступ между элементами */
 }
 
@@ -142,55 +148,53 @@ button:hover {
 }
 
 .content-container {
-    display: flex;
-    align-items: flex-start; /* Выравниваем по верхнему краю */
+    display: flex; /* Основной контейнер с флексбоксом */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    justify-content: space-between; /* Распределение элементов с пробелами */
 }
 
 .main-photo {
-    flex: 3;
-    margin-bottom: 45px; /* Отступ снизу */
+    flex: 3; /* Фотография занимает 3 части */
+    margin-top: 45px; /* Отступ снизу */
     position: relative; /* Для абсолютного позиционирования */
 }
 
 .text-block {
-    flex: 2; /* Элемент занимает оставшееся пространство */
-    position: relative;
-    padding: 20px;
+    flex: 2; /* Занимает оставшееся пространство */
+    padding: 20px; /* Отступы внутри текстового блока */
 }
 
-.text-block h2, h3 {
+.text-block h2, 
+.text-block h3 {
     text-transform: uppercase;
     color: #E3B873;
     font-family: 'Yeseva One';
-    margin: 0 0 34px 134.45px;
+    margin: 0 0 34px 0; /* Убираем левый отступ */
 }
 
 .text-block p {
     margin: 0; /* Убираем отступы */
     font-size: 14px;
     line-height: 26.73px;
-    margin-left: 134.45px;
 }
 
 .sub-sections {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Две колонки */
     gap: 34px; /* Промежуток между колонками */
-    justify-items: start;
+    justify-items: start; /* Выравнивание по началу колонки */
 }
 
 .sub-section {
     box-sizing: border-box;
     padding-bottom: 29px;
     margin: 0;
-    position: relative;
 }
 
 .slider {
     width: 100%; /* Заполнение ширины контейнера слайдера */
     height: auto; /* Высота подстраивается под содержимое */
 }
-
 
 /* ========== Хедер и Футер ========== */
 .header, .footer {
